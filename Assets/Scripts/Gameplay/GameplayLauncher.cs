@@ -2,6 +2,8 @@ using Agate.MVC.Base;
 using Agate.MVC.Core;
 using ExampleGame.Boot;
 using ExampleGame.Module.ClickGame;
+using ExampleGame.Module.SaveData;
+using ExampleGame.Module.Soundfx;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,12 +17,17 @@ namespace ExampleGame.Gameplay
 
         protected override IConnector[] GetSceneConnectors()
         {
-            return null;
+            return new IConnector[]
+            {
+                new GameplayConnector()
+            };
         }
 
         protected override IController[] GetSceneDependencies()
         {
-            return new IController[]{new ClickGameController()};
+            return new IController[]{
+                new ClickGameController(),
+                new SoundfxController()};
         }
 
         protected override IEnumerator InitSceneObject()
