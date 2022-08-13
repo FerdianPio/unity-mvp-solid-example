@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.agate.mvc": {
-      "version": "file:C:/Users/A-16/Documents/Ferdian_Priambodho/Agate_MVC_Framework/Packages/com.agate.mvc",
+      "version": "file:com.agate.mvc",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.2d.animation": {
